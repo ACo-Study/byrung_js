@@ -25,6 +25,8 @@ app.post('login', (req, res) => {
     
     let query = conn.query(
         `SELECT name FROM dbtest WHERE id = '${id}'`,
+        'INSERT INTO dbtest VALUES (?,?,?,?)',
+        
         async (err, rows) => {
             if(err) throw err;
             if(rows[0]){
