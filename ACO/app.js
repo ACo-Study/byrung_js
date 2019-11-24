@@ -6,7 +6,7 @@ const mysql = require('mysql');
 app.use(express.static("public"));
 
 app.listen(3000, () => {
-    console.log('grapple')
+    console.log('hello')
 });
 
 const conn = mysql.createConnection({
